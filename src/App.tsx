@@ -13,14 +13,13 @@ import {
   View,
 } from "react-native";
 import { centsToMoney } from "./utils/centsToMoney";
-import { Header } from "react-native/Libraries/NewAppScreen";
 
 const App = () => {
   const [charge, setCharge] = useState(null);
-  const [text, setText] = useState("");
+  const [value, setValue] = useState("");
 
   const onChangeText = (inputText: string) => {
-    setText(inputText);
+    setValue(inputText);
   };
 
   const onPay = (charge: unknown) => {
@@ -34,14 +33,14 @@ const App = () => {
   });
 
   const newCharge = async () => {
-    if (!Number(text)) {
+    if (!Number(value)) {
       alert("Valor inválido, valor deve ser em centavos. Ex: 1000 = R$10,00");
       return;
     }
 
     const payload = {
       correlationID: Math.random().toString(36).substring(7),
-      value: 100,
+      value,
       comment: "IFSC",
     };
 
@@ -73,7 +72,7 @@ const App = () => {
         <TextInput
           style={styles.input}
           onChangeText={onChangeText}
-          value={text}
+          value={value}
           placeholder="Valor em centavos"
         />
         <Pressable
