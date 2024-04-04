@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@openpix/react": "@openpix/react",
+    "@react-navigation/native": "^6.1.17",
+    "@react-navigation/native-stack": "^6.9.26",
     "core-js": "^3.36.0",
     "expo": "~50.0.13",
     "expo-print": "^12.8.1",
@@ -19,6 +21,8 @@
     "react": "18.2.0",
     "react-native": "0.73.5",
     "react-native-qrcode-svg": "^6.3.0",
+    "react-native-safe-area-context": "4.8.2",
+    "react-native-screens": "~3.29.0",
     "react-native-svg": "^15.1.0",
     "react-native-thermal-printer": "^2.3.6"
   },

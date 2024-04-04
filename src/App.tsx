@@ -6,7 +6,8 @@ import { useOpenPix } from "@openpix/react";
 import QRCode from "react-native-qrcode-svg";
 import { Pressable, StyleSheet, Text, TextInput, View } from "react-native";
 import { centsToMoney } from "./utils/centsToMoney";
-import { OpenpixHeading } from "./components/OpenpixHeading";
+import { Layout } from "./components/Layout";
+import { ChargeList } from "./components/ChargeList";
 
 const App = () => {
   const [charge, setCharge] = useState(null);
@@ -53,6 +54,7 @@ const App = () => {
     if (charge) {
       return (
         <>
+          <Text style={styles.sectionHeader}>Criar Cobrança</Text>
           <QRCode size={200} value={charge.brCode} />
           <Text>Valor: {centsToMoney(charge.value)}</Text>
           <Text>Correlation ID: {charge.correlationID}</Text>
@@ -62,7 +64,8 @@ const App = () => {
     }
 
     return (
-      <>
+      <View style={styles.actions}>
+        <Text style={styles.sectionHeader}>Criar Cobrança</Text>
         <TextInput
           style={styles.input}
           onChangeText={onChangeText}
@@ -79,15 +82,20 @@ const App = () => {
         >
           <Text style={styles.text}>Criar cobrança</Text>
         </Pressable>
-      </>
+      </View>
     );
   };
 
   return (
-    <View style={styles.container}>
-      <OpenpixHeading />
-      {getBody()}
-    </View>
+    <Layout>
+      <View style={styles.section}>
+        <View>{getBody()}</View>
+        <View>
+          <Text style={styles.sectionHeader}>Ultimas Cobranças</Text>
+          <ChargeList />
+        </View>
+      </View>
+    </Layout>
   );
 };
 
@@ -100,8 +108,6 @@ const styles = StyleSheet.create({
     gap: 10,
   },
   button: {
-    alignItems: "center",
-    justifyContent: "center",
     paddingVertical: 12,
     paddingHorizontal: 32,
     borderRadius: 4,
@@ -125,9 +131,22 @@ const styles = StyleSheet.create({
   text: {
     color: "white",
   },
-  heading: {
-    fontSize: 32,
-    fontWeight: "bold",
+  actions: {
+    display: "flex",
+    gap: 10,
+  },
+  sectionHeader: {
+    fontSize: 24,
+    fontWeight: "600",
+    color: "#03D69D",
+  },
+  section: {
+    display: "flex",
+    justifyContent: "space-between",
+    flexDirection: "column",
+    gap: 40,
+    height: "70%",
+    marginHorizontal: 20,
   },
 });
 
