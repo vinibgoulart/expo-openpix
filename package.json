@@ -13,11 +13,14 @@
     "@openpix/react": "@openpix/react",
     "core-js": "^3.36.0",
     "expo": "~50.0.13",
+    "expo-print": "^12.8.1",
+    "expo-sharing": "^11.10.0",
     "expo-status-bar": "~1.11.1",
     "react": "18.2.0",
     "react-native": "0.73.5",
     "react-native-qrcode-svg": "^6.3.0",
-    "react-native-svg": "^15.1.0"
+    "react-native-svg": "^15.1.0",
+    "react-native-thermal-printer": "^2.3.6"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",

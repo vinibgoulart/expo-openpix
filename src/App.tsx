@@ -4,15 +4,9 @@ import { registerRootComponent } from "expo";
 import { useState } from "react";
 import { useOpenPix } from "@openpix/react";
 import QRCode from "react-native-qrcode-svg";
-import {
-  Image,
-  Pressable,
-  StyleSheet,
-  Text,
-  TextInput,
-  View,
-} from "react-native";
+import { Pressable, StyleSheet, Text, TextInput, View } from "react-native";
 import { centsToMoney } from "./utils/centsToMoney";
+import { OpenpixHeading } from "./components/OpenpixHeading";
 
 const App = () => {
   const [charge, setCharge] = useState(null);
@@ -23,7 +17,7 @@ const App = () => {
   };
 
   const onPay = (charge: unknown) => {
-    alert(`Pagamento recebido: ${charge.id}`);
+    alert(`Pagamento recebido: ${charge}`);
     setCharge(null);
   };
 
@@ -91,7 +85,7 @@ const App = () => {
 
   return (
     <View style={styles.container}>
-      <Image source={require("../assets/woovi_logo.png")} />
+      <OpenpixHeading />
       {getBody()}
     </View>
   );

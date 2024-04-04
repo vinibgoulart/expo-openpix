@@ -3303,6 +3303,16 @@ expo-modules-core@1.11.12:
   dependencies:
     invariant "^2.2.4"
 
+expo-print@^12.8.1:
+  version "12.8.1"
+  resolved "https://registry.yarnpkg.com/expo-print/-/expo-print-12.8.1.tgz#493965ca9bd22c865121b786cb33d5008d5538de"
+  integrity sha512-u7RfOC21nllv0EBiyuqzrKB5pIjUAS5//2u0qn90WrHPEBa4Z7VkAQLtmOpWcHZfJ2iW33zsykherQhn2ZmRBA==
+
+expo-sharing@^11.10.0:
+  version "11.10.0"
+  resolved "https://registry.yarnpkg.com/expo-sharing/-/expo-sharing-11.10.0.tgz#0e85197ee4d2634b00fe201e571fbdc64cf83eef"
+  integrity sha512-/64RyyKlZ25WfnMXa87HbPXhIIqWwNbIku/RaIYAq4SE0XTRC+KTH3v0XFkfDa+SCG/jKsAr1pJ3vQvsNo1sCQ==
+
 expo-status-bar@~1.11.1:
   version "1.11.1"
   resolved "https://registry.yarnpkg.com/expo-status-bar/-/expo-status-bar-1.11.1.tgz#a11318741d361048c11db2b16c4364a79a74af30"
@@ -5290,6 +5300,11 @@ react-native-svg@^15.1.0:
   dependencies:
     css-select "^5.1.0"
     css-tree "^1.1.3"
+
+react-native-thermal-printer@^2.3.6:
+  version "2.3.6"
+  resolved "https://registry.yarnpkg.com/react-native-thermal-printer/-/react-native-thermal-printer-2.3.6.tgz#ee8427cc3435fc4aa3bb9116ec4052df071b4d2a"
+  integrity sha512-UUQr2kezIkkvzeF0HvUzfOxOvbYvcNk6veMktqjKZYpt8aGPEA0eTDrH1Od21uEdfPdrNhBwsyOUpCih1sLAKw==
 
 react-native@0.73.5:
   version "0.73.5"
